@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Mentions légales de La Main Occulte. Informations sur l'association, le directeur de publication, l'hébergement du site.">
+<meta name="robots" content="noindex,follow">
+<title>Mentions légales - La Main Occulte</title>
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page-mentions-legales">
+<header>
+<nav class="navbar">
+<div class="logo-container"><a href="index.html"><img src="img/acceuil/logo.png" alt="La Main Occulte"></a></div>
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="animations.html">Nos animations</a></li>
+<li><a href="Agenda.html">Agenda</a></li>
+<li><a href="galerie.html">Galerie</a></li>
+<li><a href="contact.php">Adhésion & Contact</a></li>
+</ul>
+<div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+</nav>
+</header>
+<main>
+<section class="page-header logo"><div class="container"><h1>Mentions légales</h1><p>✦ Informations légales et obligations ✦</p></div></section>
+<section class="legal-content"><div class="container">
+<div class="legal-card"><h2>Éditeur du site</h2><p><strong>Propriétaire du site :</strong> Association LA MAIN OCCULTE</p><p><strong>Contact :</strong> <a href="#" class="protect-email" data-user="aymeric_soetens" data-domain="yahoo" data-tld="fr">[Cliquez pour afficher l'email]</a></p><p><strong>Numéro SIRET :</strong> W272007461</p><p><strong>Siège social :</strong> 9 route de la levrardiere, 27410 Mesnil-en-Ouche</p><p><strong>Directeur de la publication :</strong> Aymeric Soetens, Président</p><p><strong>Hébergeur :</strong> OVHcloud, 2 rue Kellermann, 59100 Roubaix - France</p><p><strong>Délégué à la protection des données :</strong> Aymeric Soetens – <a href="#" class="protect-email" data-user="aymeric_soetens" data-domain="yahoo" data-tld="fr">[Cliquez pour afficher l'email]</a></p></div>
+<div class="legal-card"><h2>Conditions d'utilisation</h2><p>L'utilisation du site https://lamainocculte.fr implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ci-après.</p></div>
+<div class="legal-card"><h2>Propriété intellectuelle</h2><p>L'ensemble du contenu de ce site (textes, photographies, illustrations, logos, vidéos) est la propriété exclusive de l'association La Main Occulte, sauf mention contraire. Toute reproduction est interdite sans autorisation écrite préalable.</p></div>
+<div class="legal-card"><h2>Protection des données personnelles (RGPD)</h2><p>Conformément à la loi 78-17 du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de modification et de suppression des informations vous concernant. Pour l'exercer, contactez notre DPO : <a href="#" class="protect-email" data-user="aymeric_soetens" data-domain="yahoo" data-tld="fr">[Cliquez pour afficher l'email]</a></p></div>
+<div class="legal-card"><h2>Cookies</h2><p>Ce site n'utilise pas de cookies de traçage. Seuls des cookies techniques nécessaires au fonctionnement du site peuvent être déposés.</p></div>
+<div class="legal-card"><h2>Liens hypertextes</h2><p>Le site https://lamainocculte.fr contient des liens hypertextes vers d'autres sites et décline toute responsabilité à propos de ces liens externes.</p></div>
+<div class="legal-card"><h2>Droit applicable</h2><p>Tout litige est soumis au droit français et à la compétence exclusive des tribunaux d'Evreux.</p></div>
+<div class="legal-card"><h2>Dernière mise à jour</h2><p>18 mars 2026</p></div>
+</div></section>
+</main>
+<footer><div class="container"><div class="footer-content"><div class="footer-info"><a href="index.html"><h3>La Main Occulte</h3></a><p>Association de jonglerie</p><p>Mesnil-en-Ouche, Normandie</p></div><div class="footer-links"><h4>Liens rapides</h4><ul><li><a href="animations.html">Nos animations</a></li><li><a href="Agenda.html">Agenda</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="contact.php">Adhésion & Contact</a></li></ul></div><div class="footer-social"><h4>Suivez-nous</h4><div class="social-icons"><a href="https://www.facebook.com/profile.php?id=61584136633572" target="_blank" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook"> facebook</i></a><a href="https://www.tiktok.com/@la_main_occulte_" target="_blank" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"> tiktok</i></a><a href="https://www.instagram.com/la_main_occulte/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"> instagram</i></a></div></div></div><div class="footer-bottom"><p>&copy; 2026 La Main Occulte - Tous droits réservés</p><p><a href="mentions-legales.html">Mentions légales</a></p></div></div></footer>
+
+<!-- Script de protection anti-spam -->
+<script>
+(function() {
+    'use strict';
+    
+    // Protection anti-spam : reconstruit les emails au clic
+    var emailsProtects = document.querySelectorAll('.protect-email');
+    
+    emailsProtects.forEach(function(lien) {
+        var user = lien.getAttribute('data-user');
+        var domain = lien.getAttribute('data-domain');
+        var tld = lien.getAttribute('data-tld');
+        
+        if (user && domain && tld) {
+            var email = user + '@' + domain + '.' + tld;
+            
+            // Au survol, afficher l'email dans le texte du lien
+            lien.addEventListener('mouseenter', function() {
+                if (lien.textContent !== email) {
+                    lien.textContent = email;
+                }
+            });
+            
+            // Au clic, activer le mailto
+            lien.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'mailto:' + email;
+            });
+        }
+    });
+})();
+</script>
+
+<!-- Script pour le menu burger (si nécessaire) -->
+<script>
+// Menu burger pour mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (burger && navLinks) {
+        burger.addEventListener('click', function() {
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+        });
+    }
+});
+</script>
+
+</body>
+</html>

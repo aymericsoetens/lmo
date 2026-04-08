@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- spell-checker: disable -->
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFNCHRZM');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+      <meta property="og:title" content="La Main Occulte - Association de jonglerie">
+<meta property="og:description" content="Découvrez nos spectacles et ateliers en Normandie.">
+<meta property="og:image" content="https://lamainocculte.fr/img/og-image.jpg">
+<meta property="og:url" content="https://lamainocculte.fr">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="La Main Occulte : association de jonglerie en Normandie. Ateliers d'initiation et spectacles. Rejoignez-nous!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhésion - La Main Occulte</title>
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant:wght@400;600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-adhesion">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFNCHRZM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html"><img src="../img/acceuil/logo.png" alt="logo de L'association de jonglerie Normande: la Main Occulte"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../animations.html">Nos animations</a></li>
+                <li><a href="../Agenda.html">Agenda</a></li>
+                <li><a href="../galerie.html">Galerie</a></li>
+       <!--   <li><a href="jeu.html">Jeu</a></li>-->
+                <li><a href="../contact.php">Adhésion & Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Cormorant', Garamond, serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        
+        .document {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #0f1217;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(107, 45, 156, 0.3);
+            overflow: hidden;
+            border: 1px solid rgba(107, 45, 156, 0.3);
+        }
+        
+        /* En-tête */
+        .header {
+            background: linear-gradient(135deg, #1a0f2a, #0a0a0f);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #c49a6c;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '᚛';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 2rem;
+            color: rgba(196, 154, 108, 0.2);
+            font-family: monospace;
+        }
+        
+        .header::after {
+            content: '᚜';
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 2rem;
+            color: rgba(196, 154, 108, 0.2);
+            font-family: monospace;
+        }
+        
+        .logo {
+            max-width: 100px;
+            margin: 0 auto 1rem;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(107, 45, 156, 0.5));
+        }
+        
+        h1 {
+            font-family: 'Uncial', 'Segoe UI', cursive;
+            font-size: 2rem;
+            color: #c49a6c;
+            letter-spacing: 4px;
+            margin-bottom: 0.3rem;
+        }
+        
+        .subtitle {
+            color: #ff8400;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            font-family: monospace;
+        }
+        
+        .version {
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            color: #888;
+        }
+        
+        /* Corps */
+        .content {
+            padding: 2.5rem;
+        }
+        
+        /* Préambule */
+        .preamble {
+            background: rgba(107, 45, 156, 0.1);
+            border-left: 3px solid #c49a6c;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+        }
+        
+        /* Articles */
+        .article {
+            margin-bottom: 2rem;
+            page-break-inside: avoid;
+        }
+        
+        .article-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(107, 45, 156, 0.3);
+            padding-bottom: 0.5rem;
+        }
+        
+        .article-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #6b2d9c, #4a1b6e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: white;
+        }
+        
+        .article-title h2 {
+            font-family: 'Uncial', cursive;
+            font-size: 1.3rem;
+            color: #c49a6c;
+            margin: 0;
+        }
+        
+        .article-content {
+            padding-left: 3rem;
+        }
+        
+        .article-content p {
+            margin-bottom: 0.8rem;
+            text-align: justify;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 0.8rem 0 0.8rem 2rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.3rem;
+        }
+        
+        /* Encadrés */
+        .highlight-box {
+            background: rgba(107, 45, 156, 0.15);
+            border: 1px solid rgba(196, 154, 108, 0.3);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+        
+        /* Tableau */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(26, 30, 36, 0.6);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            border: 1px solid rgba(107, 45, 156, 0.3);
+            padding: 0.8rem;
+            text-align: left;
+        }
+        
+        th {
+            background: rgba(107, 45, 156, 0.3);
+            color: #c49a6c;
+            font-weight: bold;
+        }
+        
+        /* Signatures */
+        .signature-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 2rem;
+        }
+        
+        .signature-item {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .signature-line {
+            border-top: 1px solid rgba(196, 154, 108, 0.5);
+            margin-top: 2rem;
+            padding-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0a0c0f;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #666;
+            border-top: 1px solid rgba(107, 45, 156, 0.2);
+        }
+        
+        /* Rune décorative */
+        .rune-decoration {
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 1rem;
+            letter-spacing: 6px;
+            color: rgba(196, 154, 108, 0.2);
+            font-family: monospace;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .document {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .article-number {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+            .article-content {
+                padding-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <div class="header">
+            <div class="logo">
+                <img src="../img/acceuil/logo.png" alt="La Main Occulte">
+            </div>
+            <h1>Règlement intérieur</h1>
+            <div class="subtitle">La Main Occulte - Association de jonglerie</div>
+            <div class="version">Version approuvée par l'Assemblée Générale du 15 mars 2026</div>
+        </div>
+        
+        <div class="content">
+            <div class="rune-decoration">
+                ᛚ ᚨ ᛗ ᚨ ᛁ ᚾ ᛟ ᚲ ᚲ ᚢ ᛚ ᛏ ᛖ
+            </div>
+            
+            <div class="preamble">
+                <p>Le présent règlement intérieur a pour objet de compléter les statuts de l'association La Main Occulte. Il fixe les règles pratiques de fonctionnement de l'association et s'impose à tous les membres. Il est applicable à compter de sa date d'approbation par l'Assemblée Générale.</p>
+            </div>
+            
+            <!-- TITRE I - ADHÉSION -->
+            <div class="article">
+                <div class="article-title">
+                    <div class="article-number">I</div>
+                    <h2>Conditions d'adhésion</h2>
+                </div>
+                <div class="article-content">
+                    <p><strong>Article 1 - Admission</strong></p>
+                    <p>Peut être membre de l'association toute personne physique ou morale partageant les valeurs et objectifs de La Main Occulte. L'admission est prononcée par le bureau après réception du formulaire d'adhésion dûment rempli et du règlement de la cotisation.</p>
+                    
+                    <p><strong>Article 2 - Catégories de membres</strong></p>
+                    <ul>
+                        <li><strong>Membres actifs :</strong> Personnes majeures participant régulièrement aux activités et ayant le droit de vote en Assemblée Générale.</li>
+                        <li><strong>Membres jeunes :</strong> Personnes de moins de 14 ans, accompagnées d'un responsable légal.</li>
+                        <li><strong>Membres fondateurs :</strong> Membres ayant participé à la création de l'association.</li>
+                        <li><strong>Membres bienfaiteurs :</strong> Personnes soutenant l'association par un don supérieur à la cotisation annuelle.</li>
+                        <li><strong>Membres d'honneur :</strong> Personnalités nommées par le bureau pour services rendus.</li>
+                    </ul>
+                    
+                    <p><strong>Article 3 - Cotisations</strong></p>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr><th>Catégorie</th><th>Montant annuel</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Membre adulte</td><td>20€</td></tr>
+                                <tr><td>Membre enfant (-14 ans)</td><td>10€</td></tr>
+                                <tr><td>Membre fondateur</td><td>30€</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>La cotisation est due chaque année au 1er janvier. Tout membre n'ayant pas réglé sa cotisation avant le 31 mars perd sa qualité de membre actif.</p>
+                    
+                    <p><strong>Article 4 - Radiation</strong></p>
+                    <p>La qualité de membre se perd par :</p>
+                    <ul>
+                        <li>La démission (signalée par écrit au bureau)</li>
+                        <li>Le non-paiement de la cotisation</li>
+                        <li>La radiation prononcée par le bureau pour non-respect du règlement</li>
+                        <li>Le décès ou la dissolution (pour les personnes morales)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- TITRE II - FONCTIONNEMENT -->
+            <div class="article">
+                <div class="article-title">
+                    <div class="article-number">II</div>
+                    <h2>Fonctionnement de l'association</h2>
+                </div>
+                <div class="article-content">
+                    <p><strong>Article 5 - Assemblée Générale</strong></p>
+                    <p>L'Assemblée Générale ordinaire se réunit au moins une fois par an, dans les 6 mois suivant la clôture de l'exercice. Elle est composée de l'ensemble des membres à jour de cotisation. Les décisions sont prises à la majorité simple des membres présents ou représentés.</p>
+                    
+                    <p><strong>Article 6 - Bureau</strong></p>
+                    <p>Le bureau est élu pour 3 ans par l'Assemblée Générale. Il est composé d'au moins 3 membres : président, secrétaire, trésorier. Le bureau se réunit au moins 4 fois par an.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Composition du bureau :</strong></p>
+                        <ul>
+                            <li><strong>Président :</strong> Anime l'association, la représente en justice et dans tous les actes de la vie civile.</li>
+                            <li><strong>Secrétaire :</strong> Rédige les comptes rendus, gère la correspondance et les archives.</li>
+                            <li><strong>Trésorier :</strong> Gère les comptes, prépare le budget et le rapport financier.</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>Article 7 - Réunions</strong></p>
+                    <p>Les réunions du bureau sont convoquées par le président. Un compte rendu est rédigé par le secrétaire et transmis aux membres. Les décisions sont prises à la majorité des voix des membres présents.</p>
+                </div>
+            </div>
+            
+            <!-- TITRE III - ACTIVITÉS -->
+            <div class="article">
+                <div class="article-title">
+                    <div class="article-number">III</div>
+                    <h2>Activités et pratiques</h2>
+                </div>
+                <div class="article-content">
+                    <p><strong>Article 8 - Entraînements</strong></p>
+                    <p>Les entraînements sont ouverts à tous les membres à jour de cotisation. Les horaires sont fixés par le bureau et communiqués aux membres. L'accès aux créneaux se fait dans le respect des règles de sécurité et de courtoisie.</p>
+                    
+                    <p><strong>Article 9 - Sécurité</strong></p>
+                    <ul>
+                        <li>Le matériel doit être utilisé avec soin et rangé après chaque utilisation.</li>
+                        <li>Les pratiquants de feu doivent être majeurs et avoir suivi une formation spécifique.</li>
+                        <li>Un kit de premiers secours est disponible lors de chaque entraînement.</li>
+                        <li>En cas d'accident, le responsable de séance prévient les secours et remplit un rapport d'incident.</li>
+                    </ul>
+                    
+                    <p><strong>Article 10 - Manifestations</strong></p>
+                    <p>Les manifestations publiques (spectacles, démonstrations, festivals) sont organisées sous la responsabilité du bureau. Les membres participants s'engagent à respecter le code vestimentaire et les consignes de sécurité définis pour chaque événement.</p>
+                </div>
+            </div>
+            
+            <!-- TITRE IV - BÉNÉVOLES -->
+            <div class="article">
+                <div class="article-title">
+                    <div class="article-number">IV</div>
+                    <h2>Engagement bénévole</h2>
+                </div>
+                <div class="article-content">
+                    <p><strong>Article 11 - Charte du bénévole</strong></p>
+                    <p>Chaque bénévole s'engage à respecter la charte du bénévole de l'association, qui définit les droits et devoirs des bénévoles. Cette charte est remise à chaque nouvel adhérent.</p>
+                    
+                    <p><strong>Article 12 - Responsabilités</strong></p>
+                    <ul>
+                        <li>Respecter les horaires et les engagements pris.</li>
+                        <li>Adopter une attitude bienveillante envers les autres membres et le public.</li>
+                        <li>Signaler tout problème ou dysfonctionnement au bureau.</li>
+                        <li>Prévenir en cas d'absence à une mission prévue.</li>
+                    </ul>
+                    
+                    <p><strong>Article 13 - Défraiement</strong></p>
+                    <p>Les frais engagés par les bénévoles pour l'association (déplacements, repas, matériel) peuvent être remboursés sur présentation de justificatifs, après validation du bureau. Aucune rémunération ne sera versée.</p>
+                </div>
+            </div>
+            
+            <!-- TITRE V - MATÉRIEL -->
+            <div class="article">
+                <div class="article-title">
+                    <div class="article-number">V</div>
+                    <h2>Matériel et équipements</h2>
+                </div>
+                <div class="article-content">
+                    <p><strong>Article 14 - Prêt du matériel</strong></p>
+                    <p>Le matériel de l'association est mis à disposition des membres pendant les créneaux d'entraînement. Son utilisation en dehors de ces créneaux nécessite l'accord du bureau. Un registre de prêt peut être mis en place.</p>
+                    
+                    <p><strong>Article 15 - Entretien</strong></p>
+                    <p>Chaque membre est responsable du matériel qu'il utilise. En cas de détérioration volontaire ou par négligence, des frais de réparation pourront être demandés. Tout dommage doit être signalé immédiatement.</p>
+                </div>
+            </div>
+            
+            <!-- TITRE VI - COMMUNICATION -->
+            <div class="article">
+                <div class="article-title">
+                    <div class="article-number">VI</div>
+                    <h2>Communication et image</h2>
+                </div>
+                <div class="article-content">
+                    <p><strong>Article 16 - Droit à l'image</strong></p>
+                    <p>Des photos et vidéos sont susceptibles d'être prises lors des activités et événements. Le membre autorise ou non l'utilisation de son image via le formulaire d'adhésion. Il peut retirer son autorisation à tout moment par écrit.</p>
+                    
+                    <p><strong>Article 17 - Réseaux sociaux</strong></p>
+                    <p>Les membres sont encouragés à partager les actualités de l'association sur leurs réseaux sociaux, dans le respect de l'image de l'association et de ses membres. Tout contenu diffamatoire ou inapproprié est interdit.</p>
+                </div>
+            </div>
+            
+            <!-- TITRE VII - DISPOSITIONS FINALES -->
+            <div class="article">
+                <div class="article-title">
+                    <div class="article-number">VII</div>
+                    <h2>Dispositions finales</h2>
+                </div>
+                <div class="article-content">
+                    <p><strong>Article 18 - Modification du règlement</strong></p>
+                    <p>Le présent règlement peut être modifié par décision de l'Assemblée Générale, à la majorité des membres présents ou représentés. Les modifications prennent effet immédiatement après leur adoption.</p>
+                    
+                    <p><strong>Article 19 - Cas non prévus</strong></p>
+                    <p>Tout cas non prévu par le présent règlement sera tranché par le bureau, qui pourra soumettre la question à l'Assemblée Générale suivante.</p>
+                    
+                    <p><strong>Article 20 - Acceptation</strong></p>
+                    <p>L'adhésion à l'association emporte acceptation pleine et entière du présent règlement intérieur.</p>
+                </div>
+            </div>
+            
+            <div class="rune-decoration">
+                ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᚷ ᚹ
+            </div>
+            
+            <!-- Signatures -->
+            <div class="signature-box">
+                <div class="signature-item">
+                    <div class="signature-line">
+                        Fait à Mesnil-en-Ouche, le 15 mars 2026
+                    </div>
+                </div>
+                <div class="signature-item">
+                    <div class="signature-line">
+                        Le Président<br>
+                        Aymeric Soetens
+                    </div>
+                </div>
+                <div class="signature-item">
+                    <div class="signature-line">
+                        Le Secrétaire
+                    </div>
+                </div>
+            </div>
+        </div>
+         <a href="Reglement_interieur_La_Main_Occulte.pdf" class="btn-small" download>Télécharger <i class="fas fa-download"></i></a>
+        <div class="footer">
+            <p>La Main Occulte - Association loi 1901 - N° SIRET : W272007461</p>
+            <p>9 route de la Levrardiere - 27410 Mesnil-en-Ouche - asso.lmo@lamainocculte.fr</p>
+            <p>Règlement intérieur - Version 2026 - Document opposable aux membres</p>
+        </div>
+    </div>
+        <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="mini-countdown">⏳ Samhain J-<span id="miniCountDays">00</span></div>
+
+   <script src="js/all.min.js" defer></script>
+</body>
+</html>

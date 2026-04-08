@@ -1,0 +1,33 @@
+{
+  "disciplines": [
+    {
+      "name": "diabolo",
+      "history": "Le diabolo trouve ses origines il y a plus de 2000 ans en Chine et en Grèce antique...",
+      "tutorials": [
+        "https://www.youtube.com/results?search_query=diabolo+tutorial"
+      ],
+      "material": "Un diabolo classique, des baguettes, un fil en nylon"
+    },
+    {
+      "name": "baton_diable",
+      "history": "Le bâton du diable, aussi appelé « golo », est un objet de jonglerie ancien...",
+      "tutorials": [
+        "https://www.youtube.com/results?search_query=devil+stick+tutorial"
+      ],
+      "material": "Un bâton central, deux bâtons de contrôle"
+    },
+    {
+      "name": "jonglage_contact",
+      "history": "Le jonglage de contact consiste à faire rouler des balles acryliques sur le corps...",
+      "tutorials": [
+        "https://www.youtube.com/results?search_query=contact+juggling+tutorial"
+      ],
+      "material": "Des balles acryliques de 80mm à 100mm"
+    }
+  ],
+  "tips": [
+    "Pratique 15-20 minutes par jour",
+    "Filme-toi pour voir tes erreurs",
+    "Rejoins une association pour progresser plus vite"
+  ]
+}

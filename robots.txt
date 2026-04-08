@@ -1,0 +1,13 @@
+# Robots.txt pour La Main Occulte
+User-agent: *
+Allow: /
+Disallow: /scss/
+Disallow: /css/
+Disallow: /admin/
+Disallow: /includes/
+
+# Temps d'attente entre les requêtes (pour ne pas surcharger le serveur)
+Crawl-delay: 5
+
+# Sitemap
+Sitemap: https://lamainocculte.fr/sitemap.xml
