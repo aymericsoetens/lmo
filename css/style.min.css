@@ -42,10 +42,11 @@ body {
   font-size: 25px;
 }
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
 }
 section {
   width: 100%;
@@ -88,7 +89,7 @@ h1 {
   line-height: 1.2;
   margin: 0 auto var(--spacing-sm);
   text-align: center;
-  transition: text-shadow var(--duration-fast) ease;
+ 
   max-width: 90%;
   position: relative;
   z-index: 1;
@@ -229,19 +230,19 @@ p {
 @keyframes runicPulse {
   0%,
   100% {
-    filter: drop-shadow(0 0 2px #ff80008e) drop-shadow(0 0 5px #302f31c9);
+    filter: drop-shadow(0 0 2px #ff80004f) drop-shadow(0 0 5px #302f316b);
   }
   25% {
-    filter: drop-shadow(0 0 8px #ff800098) drop-shadow(0 0 15px #797879a4)
-      drop-shadow(0 0 20px #a5a4a1ce);
+    filter: drop-shadow(0 0 8px #ff80003b) drop-shadow(0 0 5px #79787949)
+      drop-shadow(0 0 20px #a5a4a14b);
   }
   50% {
-    filter: drop-shadow(0 0 15px #ae00ff96) drop-shadow(0 0 25px #3b393b7c)
-      drop-shadow(0 0 35px #36363591) drop-shadow(0 0 45px #444141bd);
+    filter: drop-shadow(0 0 8px #ae00ff44) drop-shadow(0 0 10px #3b393b34)
+      drop-shadow(0 0 9px #36363591) drop-shadow(0 0 5px #444141bd);
   }
   75% {
-    filter: drop-shadow(0 0 8px #d400ffaf) drop-shadow(0 0 15px #4c4b4d7c)
-      drop-shadow(0 0 20px #4e4e4d8e);
+    filter: drop-shadow(0 0 8px #d400ff6e) drop-shadow(0 0 5px #4c4b4d33)
+      drop-shadow(0 0 2px #4e4e4d44);
   }
 }
 @keyframes runesAppear {
@@ -664,14 +665,34 @@ footer {
     font-size: 0.7rem !important;
   }
 }
+.diaboliste {
+  align-items: left;
+ display: flex;
+  height: 100%;
+  opacity: 0.5;
+top: 100px;
+  position: absolute;
+  left: -500px;
+
+ 
+}
+.contactjuggling {
+  align-items: right;
+ display: flex;
+  height: 80%;
+  opacity: 0.5;
+    position: absolute;
+  left: 850px;
+  top: 300px;
+  }
 .page-header {
-  background: radial-gradient(ellipse at center, #1a0f2a 0, #0a0a0f 100%);
+
   padding: 120px 0 80px;
-  margin-top: 80px;
+
   text-align: center;
   position: relative;
   overflow: hidden;
-  min-height: 40vh;
+
   display: flex;
   align-items: center;
 }
@@ -682,10 +703,10 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%236b2d9c' stroke-width='0.5' opacity='0.2'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23c49a6c' stroke-width='0.5' opacity='0.2'/%3E%3C/svg%3E");
+ 
   background-size: 60px 60px;
   background-repeat: repeat;
-  opacity: 0.3;
+  opacity: 0.9;
   animation: starsFloat 20s linear infinite;
   pointer-events: none;
 }
@@ -697,10 +718,10 @@ footer {
 .page-header h1 {
   font-family: "Uncial", cursive;
   font-size: clamp(2rem, 6vw, 3.5rem);
-  color: var(--secondary-bright);
+  color:var(--text-dark);
   letter-spacing: clamp(2px, 0.5vw, 4px);
   margin-bottom: 1rem;
-  text-shadow: 0 0 20px rgba(107, 45, 156, 0.8);
+  text-shadow: 0 0 20px rgba(46, 26, 82, 0.363);
 }
 .page-header p {
   font-family: "Cormorant", serif;
@@ -812,7 +833,7 @@ footer {
 .btn-mystic.primary {
   background: linear-gradient(135deg, #6b2d9c, #4a1b6e);
   color: #fff;
-  border: 1px solid rgba(196, 154, 108, 0.5);
+  border: 13px solid rgba(196, 154, 108, 0.5);
   box-shadow: 0 0 15px rgba(107, 45, 156, 0.4);
 }
 .btn-mystic.primary:hover {
@@ -842,6 +863,17 @@ footer {
   transition: all var(--duration-fast) ease;
   border: 1px solid var(--border);
   box-shadow: 0 10px 30px rgba(212, 0, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+.specialite-card-up {
+  background: rgba(32, 31, 32, 0.178);
+  padding: var(--spacing-md) 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+ 
+  border: 3px solid;
+ border-color:var(--primary-light);
   position: relative;
   overflow: hidden;
 }
@@ -907,8 +939,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(91, 56, 161, 0.342);
-  backdrop-filter: blur(3px);
+  background: rgba(91, 56, 161, 0.507);
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -935,7 +967,7 @@ footer {
 }
 .specialite-card:hover .explore-btn {
   transform: translateY(0);
-  box-shadow: 0 0 20px #9000ff;
+  box-shadow: 0 0 20px #ecd3ff;
   animation: btnPulse 2s infinite;
 }
 @media screen and (max-width: 768px) {
@@ -944,17 +976,7 @@ footer {
     height: 150px;
   }
 }
-.visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
+V
 .countdown-section {
   padding: var(--spacing-xl) 0;
   text-align: center;
@@ -987,6 +1009,7 @@ footer {
   gap: var(--spacing-md);
   margin: var(--spacing-lg) 0;
   flex-wrap: wrap;
+  
 }
 .countdown-box {
   background: #303031;
@@ -1069,7 +1092,7 @@ footer {
   letter-spacing: 8px;
   text-transform: uppercase;
   opacity: 0.5;
-  animation: runesAppear 4s ease-in-out infinite;
+  
   text-shadow:
     0 0 5px #767279,
     0 0 10px #837e7a,
@@ -1114,8 +1137,8 @@ footer {
 .hero-mystic {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  margin-top: 80px;
+ 
+ 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2822,3 +2845,249 @@ body.modal-open {
     font-size: 0.8rem;
   }
 }
+
+        .document {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #0f1217;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(107, 45, 156, 0.3);
+            overflow: hidden;
+            border: 1px solid rgba(107, 45, 156, 0.3);
+        }
+        
+        /* En-tête */
+        .header {
+            background: linear-gradient(135deg, #1a0f2a, #0a0a0f);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #c49a6c;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '᚛';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 2rem;
+            color: rgba(196, 154, 108, 0.2);
+            font-family: monospace;
+        }
+        
+        .header::after {
+            content: '᚜';
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 2rem;
+            color: rgba(196, 154, 108, 0.2);
+            font-family: monospace;
+        }
+        
+        .logo {
+            max-width: 100px;
+            margin: 0 auto 1rem;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(107, 45, 156, 0.5));
+        }
+        
+        h1 {
+            font-family: 'Uncial', 'Segoe UI', cursive;
+            font-size: 2rem;
+            color: #c49a6c;
+            letter-spacing: 4px;
+            margin-bottom: 0.3rem;
+        }
+        
+        .subtitle {
+            color: #ff8400;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            font-family: monospace;
+        }
+        
+        .version {
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            color: #888;
+        }
+        
+        /* Corps */
+        .content {
+            padding: 2.5rem;
+        }
+        
+        /* Préambule */
+        .preamble {
+            background: rgba(107, 45, 156, 0.1);
+            border-left: 3px solid #c49a6c;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+        }
+        
+        /* Articles */
+        .article {
+            margin-bottom: 2rem;
+            page-break-inside: avoid;
+        }
+        
+        .article-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(107, 45, 156, 0.3);
+            padding-bottom: 0.5rem;
+        }
+        
+        .article-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #6b2d9c, #4a1b6e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: white;
+        }
+        
+        .article-title h2 {
+            font-family: 'Uncial', cursive;
+            font-size: 1.3rem;
+            color: #c49a6c;
+            margin: 0;
+        }
+        
+        .article-content {
+            padding-left: 3rem;
+        }
+        
+        .article-content p {
+            margin-bottom: 0.8rem;
+            text-align: justify;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 0.8rem 0 0.8rem 2rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.3rem;
+        }
+        
+        /* Encadrés */
+        .highlight-box {
+            background: rgba(107, 45, 156, 0.15);
+            border: 1px solid rgba(196, 154, 108, 0.3);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+        
+        /* Tableau */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(26, 30, 36, 0.6);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            border: 1px solid rgba(107, 45, 156, 0.3);
+            padding: 0.8rem;
+            text-align: left;
+        }
+        
+        th {
+            background: rgba(107, 45, 156, 0.3);
+            color: #c49a6c;
+            font-weight: bold;
+        }
+        
+        /* Signatures */
+        .signature-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 2rem;
+        }
+        
+        .signature-item {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .signature-line {
+            border-top: 1px solid rgba(196, 154, 108, 0.5);
+            margin-top: 2rem;
+            padding-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0a0c0f;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #666;
+            border-top: 1px solid rgba(107, 45, 156, 0.2);
+        }
+        
+        /* Rune décorative */
+        .rune-decoration {
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 1rem;
+            letter-spacing: 6px;
+            color: rgba(196, 154, 108, 0.2);
+            font-family: monospace;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .document {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .article-number {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+            .article-content {
+                padding-left: 1rem;
+            }
+        }

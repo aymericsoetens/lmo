@@ -26,14 +26,19 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Contactez La Main Occulte pour toute question, réservation ou collaboration. Association de jonglerie en Normandie.">
-<title>Contact & Rejoindre - La Main Occulte</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="description" content="La Main Occulte : association de jonglerie en Normandie. Spectacles, ateliers d'initiation. Découvrez nos disciplines : diabolo, bâton du diable, jonglage de contact.">
+<meta name="keywords" content="association jonglerie, jonglage Normandie, arts du cirque Bernay, festival Samhain, atelier diabolo, bâton du diable">
+<meta property="og:title" content="La Main Occulte - Association de jonglerie">
+<meta property="og:description" content="Découvrez nos spectacles et ateliers en Normandie.">
+<meta property="og:image" content="https://lamainocculte.fr/img/banner/logo2.PNG">
+<meta property="og:url" content="https://lamainocculte.fr">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<title>Contact - La Main Occulte </title>
 <link rel="stylesheet" href="css/style.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="page-contact-recrutement">
-<header>
 <nav class="navbar">
 <div class="logo-container"><a href="index.html"><img src="img/acceuil/logo.png" alt="La Main Occulte"></a></div>
 <ul class="nav-links">
