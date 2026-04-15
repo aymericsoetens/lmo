@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 <meta name="keywords" content="association jonglerie, jonglage Normandie, arts du cirque Bernay, festival Samhain, atelier diabolo, bâton du diable">
 <meta property="og:title" content="La Main Occulte - Association de jonglerie">
 <meta property="og:description" content="Découvrez nos spectacles et ateliers en Normandie.">
-<meta property="og:image" content="https://lamainocculte.fr/img/banner/logo2.PNG">
+<meta property="og:image" content="https://lamainocculte.fr/img/banner/logo2.webp">
 <meta property="og:url" content="https://lamainocculte.fr">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <nav class="navbar">
-<div class="logo-container"><a href="index.html"><img src="img/acceuil/logo.png" alt="La Main Occulte"></a></div>
+<div class="logo-container"><a href="index.html"><img src="img/banner/logo2.webp" alt="La Main Occulte"></a></div>
 <ul class="nav-links">
 <li><a href="index.html">Accueil</a></li>
 <li><a href="animations.html">Nos animations</a></li>

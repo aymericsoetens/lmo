@@ -1,32 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-<meta name="description" content="La Main Occulte : association de jonglerie en Normandie. Spectacles, ateliers d'initiation. Découvrez nos disciplines : diabolo, bâton du diable, jonglage de contact.">
-<meta name="keywords" content="association jonglerie, jonglage Normandie, arts du cirque Bernay, festival Samhain, atelier diabolo, bâton du diable">
-<meta property="og:title" content="La Main Occulte - Association de jonglerie">
-<meta property="og:description" content="Découvrez nos spectacles et ateliers en Normandie.">
-<meta property="og:image" content="https://lamainocculte.fr/img/banner/logo2.PNG">
-<meta property="og:url" content="https://lamainocculte.fr">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<title> Galerie - La Main Occulte </title>
-<link rel="stylesheet" href="css/style.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Galerie photos et vidéos de La Main Occulte - Découvrez nos animations, ateliers et spectacles de jonglerie en Normandie.">
+    <title>Galerie - La Main Occulte</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Styles spécifiques pour la galerie CMS */
+        .galerie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .galerie-item {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .galerie-item:hover {
+            transform: scale(1.02);
+        }
+        .galerie-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .legende {
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .video-item {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-item h4 {
+            padding: 1rem 1rem 0;
+            margin: 0;
+        }
+        .video-item p {
+            padding: 0.5rem 1rem 1rem;
+            margin: 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        .no-content {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(0,0,0,0.2);
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        .admin-link {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .admin-link a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .admin-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body class="page-galerie">
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     <header>
         <nav class="navbar">
-            <div class="logo-container"><a href="index.html"><img src="img/acceuil/logo.png" alt="La Main Occulte"></a>
-            </div>
+            <div class="logo-container"><a href="index.html"><img src="img/acceuil/logo.png" alt="La Main Occulte"></a></div>
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="animations.html">Nos Animations</a></li>
+                <li><a href="animations.html">Nos animations</a></li>
                 <li><a href="Agenda.html">Agenda</a></li>
                 <li><a href="galerie.html" class="active">Galerie</a></li>
                 <li><a href="contact.php">Adhésion & Contact</a></li>
@@ -38,81 +108,39 @@
             </div>
         </nav>
     </header>
+
     <main>
-        <section class="page-header ">
-            <div class="container ">
-                <h1>Galerie</h1>
-                <p>✦ Plongez dans l'univers visuel de La Main Occulte ✦</p>
+        <section class="page-header logo-runes">
+            <div class="container logo-runes">
+                <h1>Galerie photos & vidéos</h1>
+                <p>✦ Plongez dans l'univers magique de La Main Occulte ✦</p>
             </div>
         </section>
-        <div class="container">
-            <div class="galerie-filters"><button class="filter-btn active" data-filter="all">Tous</button><button
-                    class="filter-btn" data-filter="photos">📸 Photos</button><button class="filter-btn"
-                    data-filter="videos">🎬 Vidéos</button><button class="filter-btn" data-filter="articles">📰
-                    Articles</button></div>
-            <div id="photos-section" class="gallery-section">
-                <div class="section-title">
-                    <h2>📸 Nos moments forts</h2>
-                    <p>Découvrez les plus beaux instants capturés lors de nos animations et festivals</p>
-                </div>
-                <div class="galerie-grid" id="photosGrid"></div>
-            </div>
-            <div id="videos-section" class="videos-section" style="display:none">
-                <div class="section-title">
-                    <h2>🎬 Nos vidéos</h2>
-                    <p>Revivez nos performances et démonstrations</p>
-                </div>
-                <div class="videos-grid">
-                    <div class="video-card">
-                        <div class="video-showcase">
-                            <iframe
-                                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F61584136633572%2Fvideos%2F1624828315227123%2F&show_text=false&width=267&t=0"
-                                width="267" height="476" style="border-radius:5%;overflow:hidden" scrolling="no"
-                                frameborder="0" allowfullscreen="true"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            <iframe
-                                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1419175276619800%2F&show_text=false&width=267&t=0"
-                                width="267" height="476" style="border:none;overflow:hidden" scrolling="no"
-                                frameborder="0" allowfullscreen="true"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            <iframe
-                                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61584136633572%2Fvideos%2F2362918204230479%2F&show_text=false&width=560&t=0"
-                                width="560" height="314" style="border-radius:5%;overflow:hidden" scrolling="no"
-                                frameborder="0" allowfullscreen="true"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                  <iframe
-                                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmeurik.manip%2Fvideos%2F10206389599490088%2F&show_text=false&width=560&t=0"
-                                width="560" height="314" style="border-radius:5%;overflow:hidden" scrolling="no"
-                                frameborder="0" allowfullscreen="true"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-      
-      
 
-        <div id="articles-section" class="articles-section" style="display:none">
-            <div class="section-title">
-                <h2>📰 La presse en parle</h2>
-                <p>Ils ont écrit sur nous</p>
+        <section class="container">
+            <h2>📸 Nos derniers moments</h2>
+            <div id="galerie-photos" class="galerie-photos-container">
+                <div class="no-content">⏳ Chargement des photos...</div>
             </div>
-            <div class="articles-grid" id="articlesGrid"></div>
-        </div>
+        </section>
+
+        <section class="container">
+            <h2>🎬 Nos vidéos</h2>
+            <div id="galerie-videos" class="galerie-videos-container">
+                <div class="no-content">⏳ Chargement des vidéos...</div>
+            </div>
+        </section>
+
+        <div class="admin-link container">
+            <p>🔮 Vous souhaitez ajouter des photos ou vidéos ? 
+            <a href="/admin/" target="_blank">Accédez à l'administration →</a></p>
         </div>
     </main>
-    <div class="galerie-modal" id="galerieModal">
-        <div class="galerie-modal-content"><span class="modal-close-btn" id="modalCloseBtn">&times;</span><img
-                id="modalImage" src="" alt="">
-            <div class="modal-caption" id="modalCaption"></div>
-        </div>
-    </div>
+
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info"><a href="index.html">
-                        <h3>La Main Occulte</h3>
-                    </a>
+                <div class="footer-info"><a href="index.html"><h3>La Main Occulte</h3></a>
                     <p>Association de jonglerie</p>
                     <p>Mesnil-en-Ouche, Normandie</p>
                 </div>
@@ -127,23 +155,23 @@
                 </div>
                 <div class="footer-social">
                     <h4>Suivez-nous</h4>
-                    <div class="social-icons"><a href="https://www.facebook.com/profile.php?id=61584136633572"
-                            target="_blank" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook">
-                                facebook</i></a><a href="//www.tiktok.com/@la_main_occulte_" target="_blank"
-                            class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"> tiktok</i></a><a
-                            href="https://www.instagram.com/" target="_blank" class="social-icon"
-                            aria-label="Instagram"><i class="fa-brands fa-instagram"> instagram</i></a></div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61584136633572" target="_blank" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook"> facebook</i></a>
+                        <a href="https://www.tiktok.com/@la_main_occulte_" target="_blank" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"> tiktok</i></a>
+                        <a href="https://www.instagram.com/la_main_occulte/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"> instagram</i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 La Main Occulte - Tous droits réservés <a href="mentions-legales.html"
-                        class="mentions">Mentions légales</a></p>
+                <p>&copy; 2026 La Main Occulte - Tous droits réservés <a href="mentions-legales.html" class="mentions">Mentions légales</a></p>
             </div>
         </div>
     </footer>
+
     <div class="menu-overlay" id="menuOverlay"></div>
     <div class="mini-countdown">⏳ Samhain J-<span id="miniCountDays">00</span></div>
+    
     <script src="js/all.min.js"></script>
+    <script src="js/cms-loader.js"></script>
 </body>
-
 </html>
