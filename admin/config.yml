@@ -3,64 +3,53 @@ backend:
   repo: aymericsoetens/lmo
   branch: main
   site_domain: lamainocculte.fr
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
-# Dossier où seront stockées les images uploadées
+# Dossier pour les images uploadées
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
 
-# Affichage de l'interface admin
+# Interface en français
 locale: "fr"
 display_url: https://lamainocculte.fr
 
-# Collections de contenu
+# Logo personnalisé dans l'admin
+logo_url: https://lamainocculte.fr/img/banner/logo2.webp
+
+# Collections
 collections:
+  # Collection PHOTOS simplifiée (un seul fichier)
   - name: "photos"
     label: "📸 Galerie photos"
     label_singular: "Photo"
-    folder: "_data/galerie"
-    create: true
-    format: "json"
-    extension: "json"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: "_data"
+    create: false
+    file: "_data/photos.json"
     fields:
-      - { label: "Titre de l'album", name: "titre", widget: "string", required: true }
-      - { label: "Date", name: "date", widget: "date", default: "{{now}}", required: true }
-      - { label: "Description", name: "description", widget: "text", required: false, default: "" }
-      - { label: "Photos", name: "photos", widget: "list", required: true, 
-          fields: [
-            { label: "Image", name: "url", widget: "image", required: true },
-            { label: "Légende", name: "legende", widget: "string", required: false }
-          ] }
-      - { label: "Vidéo associée (YouTube)", name: "video_youtube", widget: "string", required: false }
+      - label: "Photos"
+        name: "photos"
+        widget: "list"
+        summary: "{{fields.legende}}"
+        fields:
+          - { label: "Image", name: "url", widget: "image", required: true }
+          - { label: "Légende", name: "legende", widget: "string", required: false }
+          - { label: "Date d'ajout", name: "date", widget: "date", default: "{{now}}" }
 
+  # Collection VIDÉOS simplifiée
   - name: "videos"
     label: "🎬 Vidéos"
     label_singular: "Vidéo"
-    folder: "_data/videos"
-    create: true
-    format: "json"
-    extension: "json"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: "_data"
+    create: false
+    file: "_data/videos.json"
     fields:
-      - { label: "Titre", name: "titre", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "text", required: false }
-      - { label: "Lien YouTube", name: "url", widget: "string", required: true, pattern: ["https?://(www\\.)?(youtube\\.com|youtu\\.be)/.*", "URL YouTube valide"] }
-      - { label: "Date d'ajout", name: "date", widget: "date", default: "{{now}}" }
-      - { label: "En vedette", name: "featured", widget: "boolean", default: false }
-
-  - name: "pages"
-    label: "📄 Pages"
-    label_singular: "Page"
-    files:
-      - name: "accueil"
-        label: "Page d'accueil"
-        file: "index.html"
+      - label: "Vidéos"
+        name: "videos"
+        widget: "list"
+        summary: "{{fields.titre}}"
         fields:
-          - { label: "Titre principal", name: "titre", widget: "string" }
-          - { label: "Message de bienvenue", name: "message", widget: "text" }
-      - name: "animations"
-        label: "Page animations"
-        file: "animations.html"
-        fields:
-          - { label: "Titre", name: "titre", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Titre", name: "titre", widget: "string", required: true }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Lien YouTube", name: "url", widget: "string", required: true, pattern: ["https?://(www\\.)?(youtube\\.com|youtu\\.be)/.*", "URL YouTube valide"] }
+          - { label: "Date d'ajout", name: "date", widget: "date", default: "{{now}}" }

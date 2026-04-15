@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Administration - La Main Occulte</title>
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0a0a0f;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         .admin-header {
@@ -14,36 +19,48 @@
             color: white;
             padding: 1rem 2rem;
             text-align: center;
+            border-bottom: 1px solid #6b2d9c;
         }
         .admin-header h1 {
             margin: 0;
             font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+        .admin-header h1 span {
+            color: #c49a6c;
         }
         .admin-header p {
             margin: 0.5rem 0 0;
             opacity: 0.8;
             font-size: 0.9rem;
         }
+        .admin-loading {
+            text-align: center;
+            padding: 3rem;
+            color: #888;
+        }
     </style>
 </head>
 <body>
     <div class="admin-header">
-        <h1>🎪 La Main Occulte - Administration</h1>
+        <h1>🎪 La Main Occulte - <span>Administration</span></h1>
         <p>Gérez vos photos et vidéos facilement</p>
     </div>
+    <div class="admin-loading" id="loadingMsg">⏳ Chargement de l'interface...</div>
+    
+    <!-- Decap CMS chargé SEUL, sans aucun autre script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    
     <script>
-        // Configuration personnalisée
-        window.CMS_MANUAL_INIT = true;
-        
-        setTimeout(() => {
-            if (window.CMS) {
-                window.CMS.init();
-                console.log('✅ CMS initialisé avec succès');
-            } else {
-                console.log('⏳ Chargement du CMS...');
-            }
-        }, 500);
+        // Attendre que Decap CMS soit prêt
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var loading = document.getElementById('loadingMsg');
+                if (loading) {
+                    loading.style.display = 'none';
+                }
+            }, 1000);
+        });
     </script>
 </body>
 </html>

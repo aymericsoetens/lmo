@@ -1,13 +1,7 @@
 // Chargeur de contenu dynamique pour La Main Occulte
-// Ce script lit les fichiers JSON générés par le CMS
+// Lit les fichiers JSON générés par le CMS
 
 const CMSLoader = {
-    // Configuration
-    config: {
-        galeriePath: '/_data/galerie/',
-        videosPath: '/_data/videos/'
-    },
-
     // Extrait l'ID d'une URL YouTube
     getYouTubeId: function(url) {
         if (!url) return null;
@@ -16,48 +10,40 @@ const CMSLoader = {
         return (match && match[2].length === 11) ? match[2] : null;
     },
 
-    // Charge toutes les photos
+    // Charge toutes les photos depuis photos.json
     chargerPhotos: async function() {
         try {
-            // On liste tous les fichiers JSON dans le dossier galerie
-            const response = await fetch('/_data/galerie/index.json');
-            if (!response.ok) throw new Error('Galerie non trouvée');
-            const albums = await response.json();
-            
-            let toutesLesPhotos = [];
-            for (const album of albums) {
-                if (album.photos && album.photos.length) {
-                    toutesLesPhotos = toutesLesPhotos.concat(album.photos);
-                }
-            }
-            return toutesLesPhotos;
+            const response = await fetch('/_data/photos.json');
+            if (!response.ok) throw new Error('Fichier photos non trouvé');
+            const data = await response.json();
+            return data.photos || [];
         } catch (error) {
-            console.log('📸 Mode démo : pas encore de photos ajoutées');
+            console.log('📸 Aucune photo pour le moment');
             return [];
         }
     },
 
-    // Charge toutes les vidéos
+    // Charge toutes les vidéos depuis videos.json
     chargerVideos: async function() {
         try {
-            const response = await fetch('/_data/videos/videos.json');
-            if (!response.ok) throw new Error('Vidéos non trouvées');
-            const videos = await response.json();
-            return Array.isArray(videos) ? videos : [];
+            const response = await fetch('/_data/videos.json');
+            if (!response.ok) throw new Error('Fichier vidéos non trouvé');
+            const data = await response.json();
+            return data.videos || [];
         } catch (error) {
-            console.log('🎬 Mode démo : pas encore de vidéos ajoutées');
+            console.log('🎬 Aucune vidéo pour le moment');
             return [];
         }
     },
 
-    // Affiche les photos dans un conteneur
+    // Affiche les photos
     afficherPhotos: async function(conteneurId) {
         const conteneur = document.getElementById(conteneurId);
         if (!conteneur) return;
 
         const photos = await this.chargerPhotos();
         if (photos.length === 0) {
-            conteneur.innerHTML = '<div class="no-content">✨ Aucune photo pour le moment. Connectez-vous à /admin/ pour en ajouter !</div>';
+            conteneur.innerHTML = '<div class="no-content">✨ Aucune photo pour le moment. Connectez-vous à <a href="/admin/">l\'administration</a> pour en ajouter !</div>';
             return;
         }
 
@@ -74,14 +60,14 @@ const CMSLoader = {
         conteneur.innerHTML = html;
     },
 
-    // Affiche les vidéos dans un conteneur
+    // Affiche les vidéos
     afficherVideos: async function(conteneurId) {
         const conteneur = document.getElementById(conteneurId);
         if (!conteneur) return;
 
         const videos = await this.chargerVideos();
         if (videos.length === 0) {
-            conteneur.innerHTML = '<div class="no-content">🎬 Aucune vidéo pour le moment. Connectez-vous à /admin/ pour en ajouter !</div>';
+            conteneur.innerHTML = '<div class="no-content">🎬 Aucune vidéo pour le moment. Connectez-vous à <a href="/admin/">l\'administration</a> pour en ajouter !</div>';
             return;
         }
 
@@ -111,16 +97,14 @@ const CMSLoader = {
     }
 };
 
-// Auto-initialisation quand la page est chargée
+// Auto-initialisation
 document.addEventListener('DOMContentLoaded', function() {
-    // Si on est sur la page galerie
-    if (document.querySelector('.galerie-photos-container')) {
+    if (document.getElementById('galerie-photos')) {
         CMSLoader.afficherPhotos('galerie-photos');
     }
-    if (document.querySelector('.galerie-videos-container')) {
+    if (document.getElementById('galerie-videos')) {
         CMSLoader.afficherVideos('galerie-videos');
     }
 });
 
-// Exporter pour utilisation globale
 window.CMSLoader = CMSLoader;
