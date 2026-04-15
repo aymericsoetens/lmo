@@ -3,7 +3,7 @@ backend:
   repo: aymericsoetens/lmo
   branch: main
   site_domain: lamainocculte.fr
-  base_url: https://api.netlify.com
+  base_url: https://lamainocculte.fr
   auth_endpoint: auth
 
 # Dossier pour les images uploadées
