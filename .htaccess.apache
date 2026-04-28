@@ -37,13 +37,5 @@ ErrorDocument 404 /404.html
 # Sécurité : empêcher l'affichage des répertoires
 Options -Indexes
 
-<Files "auth">
-    ForceType text/html
-</Files>
-
-RewriteEngine On
-RewriteRule ^auth$ auth [L]
-
-# Redirections
-RewriteCond %{THE_REQUEST} /index\.html [NC]
-RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+AddType text/yaml .yml
+AddType text/yaml .yaml
