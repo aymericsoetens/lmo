@@ -40,7 +40,7 @@
     <script>
         // Récupère le token dans l'URL
         const params = new URLSearchParams(window.location.search);
-        const token = params.get('token');
+        const token = params.get('Ov23ctWMn1ZIoruZdST0');
         const provider = params.get('provider');
         
         if (token && provider) {
