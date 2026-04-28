@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: aymericsoetens/lmo
+  branch: main
+  base_url: https://lamainocculte.fr
+  auth_endpoint: https://decapcms-oauth.vercel.app/
+ 
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+locale: "fr"
+
+logo_url: https://lamainocculte.fr/img/banner/logo2.webp
+
+collections:
+  - name: "photos"
+    label: "📸 Photos"
+    label_singular: "Photo"
+    folder: "_data"
+    create: false
+    file: "_data/photos.json"
+    fields:
+      - label: "Photos"
+        name: "photos"
+        widget: "list"
+        summary: "{{fields.legende}}"
+        fields:
+          - { label: "Image", name: "url", widget: "image", required: true }
+          - { label: "Légende", name: "legende", widget: "string", required: false }
+
+  - name: "videos"
+    label: "🎬 Vidéos"
+    label_singular: "Vidéo"
+    folder: "_data"
+    create: false
+    file: "_data/videos.json"
+    fields:
+      - label: "Vidéos"
+        name: "videos"
+        widget: "list"
+        summary: "{{fields.titre}}"
+        fields:
+          - { label: "Titre", name: "titre", widget: "string", required: true }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Lien YouTube", name: "url", widget: "string", required: true }
