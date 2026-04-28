@@ -40,8 +40,9 @@
     <script>
         // Récupère le token dans l'URL
         const params = new URLSearchParams(window.location.search);
-        const token = params.get('Ov23ctWMn1ZIoruZdST0');
-        const provider = params.get('8d50892b7e363250b923c32b0fb4503e4d83eaad');
+       const token = params.get('token');
+        const provider = params.get('provider');
+        
         
         if (token && provider) {
             // Envoie le token à la page parente (admin)
