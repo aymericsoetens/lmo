@@ -37,11 +37,13 @@ ErrorDocument 404 /404.html
 # Sécurité : empêcher l'affichage des répertoires
 Options -Indexes
 
-# Permettre l'accès au fichier auth sans extension
 <Files "auth">
     ForceType text/html
 </Files>
 
-# Réécrire les URLs pour l'auth
 RewriteEngine On
 RewriteRule ^auth$ auth [L]
+
+# Redirections
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
