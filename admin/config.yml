@@ -3,7 +3,7 @@ backend:
   repo: aymericsoetens/lmo
   branch: main
   base_url: https://lamainocculte.fr
-  auth_endpoint: https://lmo-git-main-aymericsoetens-projects.vercel.app
+  auth_endpoint: https://lmo-git-main-aymericsoetens-projects.vercel.app/auth
  
 
 media_folder: "img/uploads"
