@@ -3,7 +3,7 @@ backend:
   repo: aymericsoetens/lmo
   branch: main
   base_url: https://lamainocculte.fr
-  auth_endpoint: auth
+  auth_endpoint: auth.php
 
 # Dossier pour les images uploadées
 media_folder: "img/uploads"
@@ -17,6 +17,7 @@ logo_url: https://lamainocculte.fr/img/banner/logo2.webp
 
 # Collections
 collections:
+  # Collection PHOTOS
   - name: "photos"
     label: "📸 Galerie photos"
     label_singular: "Photo"
@@ -33,6 +34,7 @@ collections:
           - { label: "Légende", name: "legende", widget: "string", required: false }
           - { label: "Date d'ajout", name: "date", widget: "date", default: "{{now}}" }
 
+  # Collection VIDÉOS
   - name: "videos"
     label: "🎬 Vidéos"
     label_singular: "Vidéo"
@@ -52,6 +54,6 @@ collections:
               name: "url", 
               widget: "string", 
               required: true,
-              pattern: ["https?://(www\\.)?(youtube\\.com/watch\\?v=|youtu\\.be/)[\\w-]+", "URL YouTube valide"]
+              pattern: ["https?://(www\\.)?(youtube\\.com/watch\\?v=|youtu\\.be/)[\\w-]+", "URL YouTube valide (ex: https://youtube.com/watch?v=...)"]
             }
           - { label: "Date d'ajout", name: "date", widget: "date", default: "{{now}}" }
