@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentification - La Main Occulte</title>
+    <style>
+        body {
+            background: #0a0a0f;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #6b2d9c;
+            border-top: 5px solid #c49a6c;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        p {
+            margin-top: 20px;
+            color: #c49a6c;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <p>Authentification en cours...</p>
+    
+    <script>
+        // Récupère le token dans l'URL
+        const params = new URLSearchParams(window.location.search);
+        const token = params.get('token');
+        const provider = params.get('provider');
+        
+        if (token && provider) {
+            // Envoie le token à la page parente (admin)
+            window.opener.postMessage({
+                token: token,
+                provider: provider
+            }, 'https://lamainocculte.fr');
+            
+            // Ferme cette fenêtre après 1 seconde
+            setTimeout(() => {
+                window.close();
+            }, 1000);
+        } else {
+            // Redirige vers l'admin si pas de token
+            window.location.href = '/admin/';
+        }
+    </script>
+</body>
+</html>
