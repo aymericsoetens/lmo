@@ -57,7 +57,7 @@
             }, 1000);
         } else {
             // Redirige vers l'admin si pas de token
-            window.location.href = '/admin/';
+            window.location.href = 'auth/admin/';
         }
     </script>
 </body>
